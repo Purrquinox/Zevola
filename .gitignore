@@ -1,0 +1,5 @@
+config.yaml
+zevola
+go.sum
+venv
+/test.go
