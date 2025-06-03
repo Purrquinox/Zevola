@@ -3,9 +3,9 @@ package commands
 import (
 	"fmt"
 
-	"github.com/purrquinox/zevola/types"
-	"github.com/purrquinox/zevola/core"
 	"github.com/bwmarrin/discordgo"
+	"github.com/purrquinox/zevola/core"
+	"github.com/purrquinox/zevola/types"
 )
 
 var commandMap = map[string]func(types.Event, *bool){

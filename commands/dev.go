@@ -1,8 +1,8 @@
 package commands
 
 import (
-	"github.com/purrquinox/zevola/types"
 	"github.com/purrquinox/zevola/core"
+	"github.com/purrquinox/zevola/types"
 )
 
 func EnableDev(evt types.Event, stdout *bool) {
