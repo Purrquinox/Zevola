@@ -19,6 +19,4 @@ require (
 	github.com/oklog/ulid/v2 v2.1.0 // indirect
 )
 
-replace github.com/purrquinox/zevola => ./zevola
-
-replace github.com/purrquinox/zevola/types => ./zevola/types
+replace github.com/purrquinox/zevola => ./

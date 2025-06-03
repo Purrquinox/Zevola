@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/purrquinox/zevola/types"
-
+	"github.com/purrquinox/zevola/core"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -20,7 +20,7 @@ func Handle(evt types.Event, stdout *bool, name string) {
 	if handler, ok := commandMap[name]; ok {
 		handler(evt, stdout)
 	} else if *stdout {
-		Respond(evt, "", &Embed{
+		core.Respond(evt, "", &types.Embed{
 			Title:       "types.Event Received",
 			Description: fmt.Sprintf("%+v", evt),
 			Color:       0x00FF00,

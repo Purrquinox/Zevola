@@ -1,7 +1,7 @@
 // Package functions provides core utility helpers for handling
 // Discord and Revolt bot operations across platforms, including messaging,
 // slash commands, logging, cooldown management, and more.
-package main
+package core
 
 import (
 	"fmt"
@@ -10,10 +10,11 @@ import (
 	"sync"
 	"time"
 
+	"slices"
+
 	"github.com/bwmarrin/discordgo"
 	"github.com/purrquinox/zevola/types"
 	"github.com/sentinelb51/revoltgo"
-	"slices"
 )
 
 var (
@@ -21,7 +22,7 @@ var (
 	cooldownMutex sync.Mutex
 )
 
-func ptr[T any](v T) *T {
+func Ptr[T any](v T) *T {
 	return &v
 }
 

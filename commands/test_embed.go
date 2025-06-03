@@ -2,22 +2,24 @@ package commands
 
 import (
 	"fmt"
+
+	"github.com/purrquinox/zevola/core"
 	"github.com/purrquinox/zevola/types"
 )
 
 func TestEmbed(evt types.Event, _ *bool) {
-	_, err := Respond(evt, "", &Embed{
+	_, err := core.Respond(evt, "", &types.Embed{
 		Title:       "Test Embed",
 		Description: "This is a test embed.",
-		URL:         ptr("https://purrquinox.com/"),
-		IconURL:     ptr("https://purrquinox.com/logo.png"),
-		Fields: ptr([]EmbedField{
+		URL:         core.Ptr("https://purrquinox.com/"),
+		IconURL:     core.Ptr("https://purrquinox.com/logo.png"),
+		Fields: core.Ptr([]types.EmbedField{
 			{
 				Name:  "Test Field",
 				Value: "This is a test field.",
 			},
 		}),
-		Footer: &EmbedFooter{
+		Footer: &types.EmbedFooter{
 			Text:     "This is a test footer.",
 			PhotoURL: "https://purrquinox.com/logo.png",
 		},

@@ -1,10 +1,11 @@
-package main
+package core
 
 import (
+	"log"
+
 	"github.com/bwmarrin/discordgo"
 	"github.com/purrquinox/zevola/types"
 	"github.com/sentinelb51/revoltgo"
-	"log"
 )
 
 // Config sets up and initializes both Discord and Revolt clients using the provided configuration.
